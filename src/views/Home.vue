@@ -1,18 +1,21 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-layout wrap>
+    <v-container grid-list-xs>
+      <v-flex xs6>
+        ปี2018 ควรกำหนดสัดส่วนของpaddingคือระยะเว้นขอบเข้าข้างใน เป็นในลักษณะเปอร์เซนต์ เช่น ถ้ากำหนด padding:1%; ก็หมายถึงระยะเว้นขอบด้านในคือ 1% ของความกว้างของคอนเทนเนอร์ที่มากที่สุด ในที่นี้คอนเทนเนอร์ที่ใหญ่ที่สุดจะมีขนาดระบุ 700pxซึ่งเป็นกรอบสีขาวด้านซ้ายขวา (ส่วน width:220pxคือความกว้างของคอนเทนเนอร์สีเขียว ถ้าต้องการกางเต็มคอนเทนเนอร์สีขาวให้ระบุ 100% หรือไม่ต้องระบุขนาด )
+        1% ของ700 px = 7pixel โดยประมาณเป็นต้น
+        ในตัวอย่างนี้ ถ้าต้องการคงสัดส่วนเว้นขอบแบบ responsive
+        ถ่ายทอดไปที่มือถือหรืออุปกรณ์อื่นนั้น
+        ควรกำหนดจาก padding: 10px 4px 2px 8px
+        ซึ่งความสำคัญจะมีมากเฉพาะช่องด้านซ้ายขวาแต่บนล่างเมื่อกำหนดขนาดเป็นเปอร์เซนต์ก็หมายถึง%ความกว้างของคอนเทนเนอร์ที่ใหญ่ที่สุดทีอีลีเม้นนั้นบรรจุอยู่
+        เป็น padding: 1.4% 0.6% 0.3% 1.1% เป็นต้น
+      </v-flex>
+    </v-container>
+  </v-layout>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-
 export default {
-  name: 'home',
-  components: {
-    HelloWorld,
-  },
+  name: 'Home'
 };
 </script>
